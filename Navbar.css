@@ -1,0 +1,95 @@
+/* Stilizare pentru navbar */
+.navbar {
+    background-color: #333;
+    color: whitesmoke;
+    padding: 10px;
+    display: flex; /* Folosește flexbox */
+    align-items: center; 
+    justify-content: space-between; /* Împinge elementele la marginile laterale */
+    position: relative; /* Necesitar pentru a poziționa meniul */
+    z-index: 1000; /* Asigură-te că navbarul este deasupra altor elemente */
+}
+
+/* Stilizare pentru logo */
+.logo-container {
+    display: flex; 
+    align-items: center; 
+}
+
+.logo {
+    width: 50px; 
+    height: auto; 
+    margin-right: 10px; 
+}
+
+/* Stilizare pentru informațiile de contact */
+.contact-info {
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start; /* Aliniază la stânga */
+}
+
+.phone-number {
+    font-size: 18px; 
+    color: yellow; 
+}
+
+.owner-name {
+    font-size: 16px; 
+    color: white; 
+}
+
+/* Stilizare pentru meniul de navigare */
+.nav-links {
+    display: flex; /* Meniul de navigare folosește flexbox */
+    list-style: none;
+    margin-left: auto; /* Împinge meniul în dreapta */
+    transition: max-height 0.3s ease-in; /* Adaugă o tranziție pentru meniul de pe mobil */
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white; /* Setează culoarea textului meniului */
+    text-decoration: none; /* Elimină sublinierea implicită a linkurilor */
+    padding: 5px 10px; /* Adaugă un padding pentru linkuri */
+}
+
+.nav-links a:hover {
+    color: yellow; /* Culoare pe hover pentru un efect vizual */
+}
+
+/* Stilizare pentru meniul hamburger */
+.menu-toggle {
+    display: none; 
+    cursor: pointer; 
+}
+
+/* Media query pentru responsive design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Ascunde meniul pe dispozitive mici */
+        flex-direction: column; 
+        position: absolute; 
+        background-color: #333; 
+        top: 60px; 
+        right: 0; 
+        width: 100%; 
+        z-index: 10; /* Asigură-te că este deasupra altor elemente */
+        max-height: 0; /* Inițial, setăm max-height la 0 */
+        overflow: hidden; /* Ascunde conținutul care depășește max-height */
+    }
+
+    .nav-links.active {
+        display: flex; /* Arată meniul când este activ */
+        max-height: 300px; /* Setează o înălțime maximă pentru meniu */
+    }
+
+    .menu-toggle {
+        display: block; /* Arată iconița de meniu hamburger */
+        font-size: 24px; 
+        color: white; /* Asigură-te că simbolul este vizibil */
+    }
+}

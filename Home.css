@@ -1,0 +1,212 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('../../public/images/logo salon.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: white; 
+    text-align: center; /* Centrare text */
+}
+
+.home-container h1 {
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 48px;
+    color: #ffcc00; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+    animation: move 3s ease-in-out infinite, pulse 1.5s ease-in-out infinite; /* Pulsare */
+}
+
+.home-container p {
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 24px;
+    color: #00ffcc; 
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+    animation: fade 3s ease-in-out infinite, move 4s ease-in-out infinite; /* Fade și mișcare */
+}
+
+/* Stiluri pentru linkurile sociale */
+.social-media {
+    margin-top: 20px; /* Spațiu între descriere și linkuri */
+    display: flex;
+    justify-content: center; /* Centrează linkurile */
+}
+
+.social-media a {
+    margin: 0 10px; /* Spațiu între iconițe */
+    color: white; /* Culoarea iconițelor */
+    transition: transform 0.3s ease, color 0.3s ease; /* Efect de tranziție la hover */
+    font-size: 36px; /* Dimensiune iconițe */
+}
+
+.social-media a:hover {
+    color: #ffcc00; /* Schimbă culoarea iconițelor la hover */
+    transform: scale(1.2); /* Mărire la hover */
+}
+
+/* Stiluri pentru fiecare iconiță */
+.social-media a.facebook:hover {
+    color: #3b5998; /* Culoare specifică Facebook */
+}
+
+.social-media a.instagram:hover {
+    color: #e1306c; /* Culoare specifică Instagram */
+}
+
+.social-media a.youtube:hover {
+    color: #ff0000; /* Culoare specifică YouTube */
+}
+
+.social-media a.tiktok:hover {
+    color: #69c9d0; /* Culoare specifică TikTok */
+}
+
+/* Animații */
+@keyframes move {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); } /* Mișcare verticală */
+    100% { transform: translateY(0); }
+}
+
+@keyframes fade {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; } /* Crește vizibilitatea */
+    100% { opacity: 0.5; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); } /* Pulsare */
+    100% { transform: scale(1); }
+}
+
+/* Stiluri pentru secțiunea de recenzii */
+.reviews-section {
+    margin-top: 40px; /* Spațiu deasupra secțiunii de recenzii */
+    text-align: center; /* Centrează textul */
+}
+
+.reviews-section h2 {
+    font-size: 28px; /* Dimensiune titlu */
+    color: #ffcc00; /* Culoare titlu */
+}
+
+.reviews-section p {
+    font-size: 20px; /* Dimensiune descriere */
+    color: #00ffcc; /* Culoare descriere */
+}
+
+/* Stiluri pentru stele */
+.stars {
+    font-size: 24px; /* Dimensiune stele */
+    color: #ffcc00; /* Culoare stele */
+    margin-top: 10px; /* Spațiu între descriere și stele */
+    cursor: pointer; /* Cursor pointer la hover */
+}
+
+.star {
+    margin: 0 2px; /* Spațiu între stele */
+    transition: color 0.2s; /* Efect de tranziție la hover */
+}
+
+.star.selected {
+    color: #00ffcc; /* Culoare diferită pentru stelele selectate */
+}
+
+/* Stiluri pentru afișarea recenziilor */
+.review-display {
+    margin-top: 20px; /* Spațiu între titlu și recenzii */
+    padding: 20px; /* Spațiu interior */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundal semi-transparent */
+    border-radius: 8px; /* Colțuri rotunjite */
+}
+
+.review {
+    margin-bottom: 15px; /* Spațiu între recenzii */
+    color: #ffffff; /* Culoare text recenzie */
+    font-size: 18px; /* Dimensiune text recenzie */
+    text-align: left; /* Text aliniat la stânga */
+}
+
+/* Stiluri pentru formularul de mesaje */
+.message-form {
+    margin-top: 30px; /* Spațiu deasupra formularului */
+    text-align: center; /* Centrează formularul */
+}
+
+.message-form input[type="text"], 
+.message-form textarea {
+    width: 50%; /* Lățimea câmpului de text */
+    max-width: 300px; /* Lățimea maximă a câmpului de text */
+    padding: 10px; /* Spațiu interior */
+    border: 1px solid #ccc; /* Bordură */
+    border-radius: 5px; /* Colțuri rotunjite */
+    margin-bottom: 10px; /* Spațiu între câmpul de text și textarea */
+    resize: none; /* Dezactivează redimensionarea pentru textarea */
+}
+
+/* Stiluri pentru butonul de trimitere */
+.message-form button {
+    margin-top: 10px; /* Spațiu deasupra butonului */
+    padding: 10px 20px; /* Spațiu interior */
+    background-color: #ffcc00; /* Culoare fundal */
+    color: white; /* Culoare text */
+    border: none; /* Fără bordură */
+    border-radius: 4px; /* Colțuri rotunjite */
+    cursor: pointer; /* Cursor pointer la hover */
+}
+
+.message-form button:hover {
+    background-color: #00ffcc; /* Schimbă culoarea la hover */
+}
+
+/* Stiluri pentru mesajul de succes */
+.success-message {
+    color: #00ffcc; /* Culoare mesaj de succes */
+    margin-top: 20px; /* Spațiu deasupra mesajului de succes */
+    font-size: 18px; /* Dimensiune text mesaj de succes */
+    text-align: center; /* Centrează textul */
+}
+
+/* Media query pentru responsive */
+@media (max-width: 768px) {
+    .home-container h1 {
+        font-size: 32px; /* Dimensiune mai mică pe mobil */
+        animation: move 4s ease-in-out infinite, pulse 2s ease-in-out infinite; /* Ușor mai lent pe mobil */
+    }
+
+    .home-container p {
+        font-size: 18px; /* Dimensiune mai mică pe mobil */
+        animation: fade 4s ease-in-out infinite, move 5s ease-in-out infinite; /* Ajustare pentru mobil */
+    }
+
+    .social-media {
+        flex-direction: column; /* Aranjare verticală pe mobil */
+    }
+
+    /* Stiluri pentru recenzii și mesaje pe mobil */
+    .reviews-section h2 {
+        font-size: 24px; /* Dimensiune titlu mai mică pe mobil */
+    }
+
+    .reviews-section p {
+        font-size: 18px; /* Dimensiune descriere mai mică pe mobil */
+    }
+
+    .stars {
+        font-size: 20px; /* Dimensiune stele mai mică pe mobil */
+    }
+
+    .message-form input[type="text"], .message-form textarea {
+        width: 90%; /* Lățimea câmpului de text pe mobil */
+    }
+
+    .message-form button {
+        width: 90%; /* Lățimea butonului pe mobil */
+    }
+}

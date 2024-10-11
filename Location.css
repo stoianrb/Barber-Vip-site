@@ -1,0 +1,48 @@
+/* src/pages/Location.css */
+
+.location-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centralizează conținutul pe orizontală */
+    justify-content: center;
+    min-height: 100vh; /* Ocupă înălțimea completă a paginii */
+    background-image: url('../../public/images/logo salon.jpg'); /* Înlocuiește cu calea corectă a imaginii */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.location-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundal semi-transparent */
+}
+
+h1, h2, p {
+    color: white;
+    z-index: 1; /* Asigură-te că textul este deasupra fundalului */
+}
+
+.map {
+    width: 80%; /* Controlează dimensiunea hărții */
+    max-width: 800px;
+    height: 450px;
+    z-index: 1; /* Asigură-te că harta este deasupra fundalului */
+    margin-top: 20px;
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden; /* Pentru colțuri rotunjite */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25); /* Adaugă o umbră pentru efect vizual */
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}

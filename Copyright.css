@@ -1,0 +1,15 @@
+/* src/components/Copyright.css */
+.copyright {
+    text-align: center; /* Centrează textul */
+    color: rgb(236, 17, 17); /* Culoarea textului */
+    padding: 10px 0; /* Padding pentru un aspect mai bun */
+    font-size: 14px; /* Dimensiunea fontului */
+    position: relative; /* Poziționează relativ față de container */
+    z-index: 1; /* Asigură că copyright-ul este vizibil */
+}
+
+
+.copyright p {
+    color: #000; /* Culoarea textului (negru) */
+    font-weight: bold; /* Face textul mai îngroșat */
+}
